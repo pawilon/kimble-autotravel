@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "kainostravel",
+  "type": "object",
+  "properties": {
+    "anchors": {
+      "id": "anchors",
+      "type": "array",
+      "items": {
+        "id": "auto-generated-schema-841"
+      }
+    },
+    "global": {
+      "id": "global",
+      "type": "object",
+      "additionalProperties": false, 
+      "properties": {
+        "main_traveller": {
+          "id": "global/main_traveller",
+          "type": "string"
+        },
+        "travel_summary": {
+          "id": "global/travel_summary",
+          "type": "string"
+        },
+        "from_date": {
+          "id": "global/from_date",
+          "type": "string"
+        },
+        "to_date": {
+          "id": "global/to_date",
+          "type": "string"
+        },
+        "activity": {
+          "id": "global/activity",
+          "type": "string"
+        },
+        "reason": {
+          "id": "global/reason",
+          "type": "string"
+        },
+        "luggage": {
+         "id": "global/luggage",
+         "type": "boolean"
+        }
+      }
+    },
+    "flights": {
+      "id": "flights",
+      "type": "array",
+      "items": {
+        "id": "flights/1",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "departure_airport": {
+            "id": "flights/1/departure_airport",
+            "type": "string"
+          },
+          "destination_airport": {
+            "id": "flights/1/destination_airport",
+            "type": "string"
+          },
+          "departure_date": {
+            "id": "flights/1/departure_date",
+            "type": "string"
+          },
+          "departure_time": {
+            "id": "flights/1/departure_time",
+            "type": "string"
+          },
+          "requisition_notes": {
+            "id": "flights/1/requisition_notes",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    },
+    "hotels": {
+      "id": "hotels",
+      "type": "array",
+      "items": {
+        "id": "hotels/1",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "check_in": {
+            "id": "hotels/1/check_in",
+            "type": "string"
+          },
+          "check_out": {
+            "id": "hotels/1/check_out",
+            "type": "string"
+          },
+          "preference": {
+            "id": "hotels/1/preference",
+            "type": "string"
+          },
+          "requisition_notes": {
+            "id": "hotels/1/requisition_notes",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    },
+    "trains": {
+      "id": "trains",
+      "type": "array",
+      "items": {
+        "id": "trains/1",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "departure_station": {
+            "id": "trains/1/departure_station",
+            "type": "string"
+          },
+          "departure_date": {
+            "id": "trains/1/departure_date",
+            "type": "string"
+          },
+          "departure_time": {
+            "id": "trains/1/departure_time",
+            "type": "string"
+          },
+          "destination_station": {
+            "id": "trains/1/destination_station",
+            "type": "string"
+          },
+          "requisition_notes": {
+            "id": "trains/1/requisition_notes",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    },
+    "taxis": {
+      "id": "taxis",
+      "type": "array",
+      "items": {
+        "id": "taxis/1",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "departure_address": {
+            "id": "taxis/1/departure_address",
+            "type": "string"
+          },
+          "departure_date": {
+            "id": "taxis/1/departure_date",
+            "type": "string"
+          },
+          "departure_time": {
+            "id": "taxis/1/departure_time",
+            "type": "string"
+          },
+          "destination_address": {
+            "id": "taxis/1/destination_address",
+            "type": "string"
+          },
+          "requisition_notes": {
+            "id": "taxis/1/requisition_notes",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    },
+    "cars": {
+      "id": "cars",
+      "type": "array",
+      "items": {
+        "id": "cars/0",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "pickup": {
+            "id": "cars/0/pickup",
+            "type": "string"
+          },
+          "pickup_date": {
+            "id": "cars/0/pickup_date",
+            "type": "string"
+          },
+          "dropoff": {
+            "id": "cars/0/dropoff",
+            "type": "string"
+          },
+          "dropoff_date": {
+            "id": "cars/0/dropoff_date",
+            "type": "string"
+          },
+          "requisition_notes": {
+            "id": "cars/0/requisition_notes",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    },
+    "other_travellers": {
+      "id": "other_travellers",
+      "type": "array",
+      "items": {
+        "id": "other_travellers/0",
+        "type": "object",
+        "additionalProperties": false, 
+        "properties": {
+          "name": {
+            "id": "other_travellers/0/name",
+            "type": "string"
+          }
+        }
+      },
+      "additionalItems": false
+    }
+  },
+  "required": [
+    "global"
+  ]
+}

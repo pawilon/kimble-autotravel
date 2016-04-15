@@ -1,0 +1,92 @@
+---
+
+# Standard YAML anchors, you can define your own as you please
+anchors:
+  - &from_date      '01/05/2016'
+  - &to_date        '13/05/2016'
+  - &almost_to_date '12/05/2016'
+
+global:
+  main_traveller : 'John Doe'
+  travel_summary : 'Belfast visit'
+  from_date      : *from_date
+  to_date        : *to_date
+  # The activity value has to match EXACTLY the possible selection on the form
+  # The same is true for all other selection based values in the form
+  activity       : 'Company Activities'
+  reason         : ''
+  luggage        : true
+
+flights: 
+  - departure_airport   : 'GDN - Gdansk'
+    destination_airport : 'DUB - Dublin'
+    departure_date      : *from_date
+    departure_time      : '11.00'
+    requisition_notes   : |
+      Ryanair
+      Gdansk (GDN) -> Dublin (DUB)
+      10:45 - 12:40
+
+      Luggage 20kg
+
+  - departure_airport   : 'DUB - Dublin'
+    destination_airport : 'GDN - Gdansk'
+    departure_date      : *to_date
+    departure_time      : '06.00'
+    requisition_notes   : |
+      Ryanair
+      Dublin (DUB) -> Gdansk (GDN)
+      06:15 - 09:55
+
+      Luggage 20kg
+
+hotels:
+  - check_in          : *from_date
+    check_out         : *almost_to_date
+    preference        : 'Dukes at Queens in Belfast'
+    requisition_notes : ''
+
+  - check_in          : *almost_to_date
+    check_out         : *to_date
+    preference        : 'Maldron Hotel Dublin Airport room only'
+    requisition_notes : ''
+
+trains:
+  - departure_station   : 'Dublin Airport'
+    departure_date      : *from_date
+    departure_time      : '14.00'
+    destination_station : 'Belfast (Europa Bus Centre)'
+    requisition_notes   : 'Aircoach @ 13:55'
+
+  - departure_station   : 'Belfast (Europa Bus Centre)'
+    departure_date      : *almost_to_date
+    departure_time      : '17.30'
+    destination_station : 'Dublin Airport'
+    requisition_notes   : 'Aircoach @ 17:30'
+
+taxis:
+  - departure_address   : 'ul. Dluga 1, Gdansk'
+    departure_date      : *from_date
+    departure_time      : '09:00'
+    destination_address : 'Gdansk Airport'
+    requisition_notes   : 'Phone: +48 123 345 678'
+
+  - departure_address   : 'Gdansk Airport'
+    departure_date      : *to_date
+    departure_time      : '09:00'
+    destination_address : 'ul. Dluga 1, Gdansk'
+    requisition_notes   : 'Phone: +48 123 345 678'
+
+# Any section is optional
+# You can view the possible values for sections 
+# skipped for this travel request in the comments below
+
+# cars:
+#   - pickup            : ''
+#     pickup_date       : ''
+#     dropoff           : ''
+#     dropoff_date      : ''
+#     requisition_notes : ''
+
+# other_travellers:
+#   - name : ''
