@@ -13,6 +13,7 @@ HANDLER=$DIR/serverless-autotravel-python/functions/generate/handler.py
 
 if [ -z "$1" ]; then
   echo "Usage: $0 travel_request_file"
+  exit 1
 fi
 
 REQUEST="$1"

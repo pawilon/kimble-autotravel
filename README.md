@@ -8,6 +8,8 @@ The python script is also exposed as an API endpoint in AWS, created using the [
 
 ### Prepare the input
 
+Using YAML instead of JSON, as it can be very easilly converted to JSON, but is much easier to read
+
 ![image](imgs/input.gif)
 
 ### Pass the input to the API endpoint...
@@ -143,7 +145,7 @@ cat travel.yaml | ruby -e 'require "yaml"; require "json"; puts JSON.dump(YAML.l
 
 This will convert the yaml file into json and post it into the AWS API Gateway endpoint, which will in turn run the AWS Lambda function that parses the json and returns the iMacro script.
 
-You can alternatevily skip doing any API calls altogether, and just run the code on your machine. This requires installing the python dependencies first:
+You can alternatively skip doing any API calls altogether, and just run the code on your machine. This requires installing the python dependencies first:
 
 ```
 pip install -r requirements.txt -t serverless-autotravel-python/functions/lib
